@@ -9,12 +9,8 @@ class LikeButton extends React.Component {
       return 'You like this';
     }
 
-    //Browser natively supported JS
-    return React.createElement(
-      'button',
-      {onClick: () => {this.setState({like: true})}},
-      'Like'
-    );
+    //JSX by babel
+    return (<button onClick={() => this.setState({like: true})}>Like</button>);
   }
 }
 
